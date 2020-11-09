@@ -1,0 +1,257 @@
+.body {
+    position: relative;
+}
+.Slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 80%;
+    height: 70%;
+    box-shadow: #ccc 0px 0px 10px;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Item {
+  position: relative;
+    text-align: center;
+    word-wrap: normal;
+}
+
+img {
+    width: 40%;
+}
+
+.Price {
+    color: white;
+    font-weight: bold;
+    width: max-content;
+    font-size: 24pt;
+    padding: 3px 15px;
+    top: 20px;
+    left: -30px;
+    position: absolute;
+    background-color: rgb(127, 0, 201);
+}
+
+.Title {
+    color: rgb(114, 0, 180);
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.SecTitle {
+    color: gray;
+    font-weight: 500;
+    font-size: 11pt;
+    margin-bottom: 3%;
+}
+.Description {
+    color: gray;
+    font-weight: 400;
+    font-size: 9pt;
+    padding: 0px 10px;
+}
+
+.LeftItem {
+    float: left;
+    width: 50%;
+    height: 50%;
+}
+
+.RightItem {
+    width: 50%;
+    float: Right;
+    height: 50%;
+    border-left: solid 1px wheat;
+}
+
+.RightPanel {
+    position: absolute;
+    right: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.RightPanel div {
+    font-size: 16pt;
+    font-weight: 700;
+}
+
+.ManageButtons {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.CircularProgressBar {
+    position: absolute;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    top: -80px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.Circle {
+    position: absolute;
+}
+.Circle svg {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    z-index: 9;
+    transform: rotate(270deg);
+}
+.Circle svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: rgb(220, 166, 252);
+    stroke-width: 10px;
+    stroke-linecap: round;
+    transform: translate(6px, 6px);
+}
+.Circle svg circle:nth-child(1) {
+    fill: azure;
+}
+.Circle svg circle:nth-child(3) {
+    stroke-dasharray: 630;
+    transform: rotate(11px);
+    stroke-width: 12px;
+    stroke: rgb(114, 0, 180);
+}
+
+.Text .SoldNumber {
+    position: absolute;
+    top: 15px;
+    font-size: 26pt;
+    font-weight: 600;
+    color: rgb(114, 0, 180);
+}
+
+.Text .Sold {
+    position: absolute;
+    font-size: 12pt;
+    font-weight: 600;
+    letter-spacing: 2px;
+    top: 60px;
+}
+.Text .OutOf {
+    position: absolute;
+    font-size: 10pt;
+    color: gray;
+    top: 95px;
+}
+
+.Text .OutOfNumber {
+    position: absolute;
+    font-weight: 600;
+    color: gray;
+    font-size: 12pt;
+    top: 110px;
+}
+
+.Text {
+    position: relative;
+    left: -5px;
+    top: 5px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    display: flex;
+    z-index: 10;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: #ccc 0px 0px 10px;
+}
+
+.ManageButtons svg,
+.RightPanel > svg {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    border-style: none;
+    color: white;
+    background-color: rgb(128, 0, 202);
+    font-size: 16pt;
+    font-weight: 700;
+    margin: 10px 0px;
+    padding: 5px;
+}
+.RightPanel > svg {
+    border-radius: 50%;
+    border: solid 2px white;
+}
+.ManageButtons svg path,
+.RightPanel > svg path {
+    fill: white;
+}
+.RightPanel svg circle {
+    fill: rgb(100, 0, 158);
+    width: 100%;
+    height: 100%;
+}
+.RightPanel div svg {
+    position: absolute;
+    height: 200px;
+    z-index: -3123;
+    transform: translate(-40%, -25px) scaleX(0.3) scaleY(1.3);
+}
+
+.triangle-up-left {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -30px;
+    top: 74px;
+    border-top: 30px solid rgb(100, 0, 158);
+    border-left: 30px solid transparent;
+}
+
+.WinThisAll svg {
+    width: 200px;
+    height: 150px;
+    transform: rotate(140deg);
+
+}
+
+.WinThisAll svg path{
+    width: 100%;
+    height: 100%;
+    transform: translate(-40%,0%);
+    fill:rgb(100, 0, 158) ;
+}
+.WinThisText {
+position: absolute;
+color: white;
+font-size: 26pt;
+font-weight: 600;
+left: 35px;
+top:40px;
+transform: rotate(-40deg);
+}
+.WinThisAll {
+    position: absolute;
+    top: 7%;
+    z-index: 777;
+    left: 60%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    transform: translate(-50%, 0%);
+}
