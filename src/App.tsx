@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Slide from './Components/Slide';
-import './Styles/App.css';
-
-
+import './App.scss';
 
 export default class App extends Component<{}, {}>{
   render() {

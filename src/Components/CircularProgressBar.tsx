@@ -10,17 +10,16 @@ interface CircularProgressBarState {
   }
   
   export default class CircularProgressBar extends Component<CircularProgressBarProps, CircularProgressBarState>{
-    constructor(props: CircularProgressBarProps) {
-      super(props)
-    }
-    renderCircle = () => {
-      let res: number, per: number;
-      per = (this.props.SoldNumber * 100) / this.props.OutOfNumber;
-      res = 630 - (630 * per) / 100;
-      $(window).on('load', () => {
-        $('.Circle svg circle:nth-child(3)').css('stroke-dashoffset', res)
-      })
-    }
+      constructor(props :CircularProgressBarProps){
+          super(props);
+
+          let res: number, per: number;
+          per = (this.props.SoldNumber * 100) / this.props.OutOfNumber;
+          res = 630 - (630 * per) / 100;
+          $(window).on('load', () => {
+            $('.Circle svg circle:nth-child(3)').css('stroke-dashoffset', res)
+          })
+      }
     render() {
       return (
         <div className='CircularProgressBar'>
@@ -37,7 +36,6 @@ interface CircularProgressBarState {
             <div className='OutOf'>OUT OF</div>
             <div className='OutOfNumber'>{this.props.OutOfNumber}</div>
           </div>
-          {this.renderCircle()}
         </div>
       )
     }

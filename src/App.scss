@@ -1,3 +1,6 @@
+$PeimaryColor : rgb(89, 0, 140);
+$SecondryColor:rgb(127, 0, 200);
+
 .body {
     position: relative;
 }
@@ -35,11 +38,11 @@ img {
     top: 20px;
     left: -30px;
     position: absolute;
-    background-color: rgb(127, 0, 201);
+    background-color: $SecondryColor;
 }
 
 .Title {
-    color: rgb(114, 0, 180);
+    color: $SecondryColor;
     font-weight: bold;
     font-size: 16pt;
 }
@@ -131,7 +134,7 @@ img {
     stroke-dasharray: 630;
     transform: rotate(11px);
     stroke-width: 12px;
-    stroke: rgb(114, 0, 180);
+    stroke: $SecondryColor;
 }
 
 .Text .SoldNumber {
@@ -139,7 +142,7 @@ img {
     top: 15px;
     font-size: 26pt;
     font-weight: 600;
-    color: rgb(114, 0, 180);
+    color: $SecondryColor;
 }
 
 .Text .Sold {
@@ -186,7 +189,7 @@ img {
     border-radius: 10px;
     border-style: none;
     color: white;
-    background-color: rgb(128, 0, 202);
+    background-color: $SecondryColor;
     font-size: 16pt;
     font-weight: 700;
     margin: 10px 0px;
@@ -201,7 +204,7 @@ img {
     fill: white;
 }
 .RightPanel svg circle {
-    fill: rgb(100, 0, 158);
+    fill: $PeimaryColor;
     width: 100%;
     height: 100%;
 }
@@ -218,7 +221,7 @@ img {
     position: absolute;
     left: -30px;
     top: 74px;
-    border-top: 30px solid rgb(100, 0, 158);
+    border-top: 30px solid $PeimaryColor;
     border-left: 30px solid transparent;
 }
 
@@ -233,7 +236,7 @@ img {
     width: 100%;
     height: 100%;
     transform: translate(-40%,0%);
-    fill:rgb(100, 0, 158) ;
+    fill: $PeimaryColor;
 }
 .WinThisText {
 position: absolute;
@@ -246,7 +249,7 @@ transform: rotate(-40deg);
 }
 .WinThisAll {
     position: absolute;
-    top: 7%;
+    top: 50px;
     z-index: 777;
     left: 60%;
     justify-content: center;

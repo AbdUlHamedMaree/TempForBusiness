@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import CircularProgressBar from './CircularProgressBar';
 import Item from './Item';
 
-
 interface SlideState {
   ItemCount: number;
-
 }
 interface SlideProps {
   Price: number;
@@ -30,11 +28,11 @@ export default class Slide extends Component<SlideProps, SlideState>{
   }
 
   LoveButtonHundler = () => {
-alert('added to fav')
+alert('added to fav');
   }
 
   AddToCartButtonHundler = () => {
-    alert('added to cart')
+    alert('added to cart');
   }
 
   render() {
