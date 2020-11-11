@@ -1,14 +1,11 @@
-$PeimaryColor : rgb(89, 0, 140);
-$SecondryColor:rgb(127, 0, 200);
+$PeimaryColor: rgb(89, 0, 140);
+$SecondryColor: rgb(127, 0, 200);
 
 .body {
     position: relative;
 }
 .Slide {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
     width: 80%;
     height: 70%;
     box-shadow: #ccc 0px 0px 10px;
@@ -20,7 +17,7 @@ $SecondryColor:rgb(127, 0, 200);
 }
 
 .Item {
-  position: relative;
+    position: relative;
     text-align: center;
     word-wrap: normal;
 }
@@ -229,23 +226,22 @@ img {
     width: 200px;
     height: 150px;
     transform: rotate(140deg);
-
 }
 
-.WinThisAll svg path{
+.WinThisAll svg path {
     width: 100%;
     height: 100%;
-    transform: translate(-40%,0%);
+    transform: translate(-40%, 0%);
     fill: $PeimaryColor;
 }
 .WinThisText {
-position: absolute;
-color: white;
-font-size: 26pt;
-font-weight: 600;
-left: 35px;
-top:40px;
-transform: rotate(-40deg);
+    position: absolute;
+    color: white;
+    font-size: 26pt;
+    font-weight: 600;
+    left: 35px;
+    top: 40px;
+    transform: rotate(-40deg);
 }
 .WinThisAll {
     position: absolute;
@@ -257,4 +253,384 @@ transform: rotate(-40deg);
     align-content: center;
     text-align: center;
     transform: translate(-50%, 0%);
+}
+
+$theme1: rgb(0, 200, 0);
+$hight: 30px;
+$CardWidth: 300px;
+@mixin myBorder {
+    border: solid 1px gray;
+}
+
+.Card {
+    width: $CardWidth;
+    height: 200px;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+        box-shadow: gray 0px 0px 5px;
+    }
+
+    .CardPart2Continer {
+        position: absolute;
+        left: $CardWidth/2;
+        transform: translate(-50%, 0%);
+        bottom: -40px;
+    }
+
+    .CardPart2 {
+        position: relative;
+        width: 250px;
+        height: 75px;
+        box-shadow: #bbb 0px 0px 3px;
+        border-radius: 15px;
+        text-align: center;
+        padding: 5px;
+        font-weight: 600;
+        font-size: 14pt;
+        background-color: white;
+    }
+}
+
+.Card .ProgressBarContiner {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.Card .ProgressBarContiner .ProgressBar {
+    width: 200px;
+    height: $hight;
+    border: solid 1px gray;
+    position: relative;
+    font-size: 11pt;
+    border-radius: $hight/2;
+    text-align: right;
+    color: white;
+    padding-right: 8px;
+    text-align: center;
+    background: transparent;
+}
+
+.Card .ProgressBarContiner .ProgressBar .TheRealBar {
+    position: absolute;
+    right: 0px;
+    width: 0%;
+    height: 100%;
+    border-radius: $hight/2;
+    background-color: $theme1;
+    z-index: -1;
+}
+
+$Thememe: rgb(214, 160, 58);
+$Thememe2: rgb(255, 195, 85);
+
+.IDK {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: $Thememe;
+    transition: 0.2s;
+    .IDKElCon {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        .IDKIcon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            transform: translate(-50%, -70%);
+            border-radius: 50%;
+            padding: 15px;
+            background-color: white;
+            svg {
+                position: relative;
+                height: 60px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                path {
+                    fill: $Thememe;
+                }
+            }
+        }
+
+        .Title {
+            position: relative;
+            top: 70%;
+            font-size: 18pt;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+.ImageSlider {
+    width: 200px;
+    height: 100%;
+    background-color: #eee;
+    position: relative;
+    overflow: hidden;
+    .ImageSliderContent {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        .ISText {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            text-align: right;
+            padding: 10px;
+            font-size: 14pt;
+            color: $Thememe;
+            font-weight: 600;
+            &::selection {
+                color: none;
+                background: none;
+            }
+        }
+        img {
+            object-fit: contain;
+            margin: 40px 10px 0px 10px;
+            width: 90%;
+            height: 250px;
+        }
+        iframe {
+            width: 90%;
+            margin: 40px 10px 0px 10px;
+        }
+        svg {
+            width: 15px;
+            height: 15px;
+            transform: scaleY(2);
+            position: absolute;
+            top: 60%;
+            path {
+                fill: $Thememe;
+            }
+            &:hover {
+                opacity: 0.8;
+                cursor: pointer;
+            }
+        }
+
+        svg:nth-child(1) {
+            left: 10px;
+        }
+
+        svg:nth-child(2) {
+            right: 10px;
+        }
+    }
+}
+
+.CardWithInformation {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-color: #eee;
+    overflow: auto;
+    padding: 5px;
+    overflow: hidden;
+    .CardWithInformationContent {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        .CWITitle {
+            font-size: 16pt;
+            font-weight: 600;
+            color: $Thememe;
+            text-align: right;
+            padding: 15px 15px 30px 15px;
+        }
+
+        .CWIChildren {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            img {
+                object-fit: cover;
+                width: 90%;
+                height: 200px;
+            }
+
+            div:nth-child(1) {
+                svg {
+                    fill: $Thememe;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+            div:nth-child(2) {
+                color: $Thememe;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            div:nth-child(3) {
+                font-size: 16pt;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.Bar {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    background-color: #ddd;
+
+    .IconLink {
+        position: relative;
+        margin: 5px;
+        min-width: 200px;
+        width: fit-content;
+        height: 70px;
+        background-color: #ddd;
+        transition: 0.2s;
+        border-radius: 10px;
+
+        &:nth-child(2) {
+            width: 400px;
+        }
+        .EmailBar {
+            display: flex;
+            margin: 0px 10px 0px 0px;
+            input {
+                border-style: none;
+                border: solid 1px $Thememe;
+                border-radius: 5px 0px 0px 5px;
+                outline: none;
+            }
+            button {
+                outline: none;
+                border-style: none;
+                padding: 5px;
+                background-color: $Thememe;
+                width: max-content;
+                color: white;
+            }
+        }
+
+        .IconLinkContent {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            .ILText {
+                font-weight: 600;
+                width: 70%;
+                height: 80px;
+                margin: 0px 10px 0px 0px;
+                font-size: 10pt;
+                overflow: auto;
+                text-align: right;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                word-wrap: break-word;
+                line-height: 35px;
+            }
+            svg {
+                fill: #aaa;
+                padding: 5px;
+                min-width: 40px;
+                height: 40px;
+                border: solid 3px #aaa;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.NavBar {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+
+    .NavBarContent {
+        position: absolute;
+        display: flex;
+        height: 100%;
+        border-radius: 40px;
+        background-color: $Thememe;
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: max-content;
+            color: white;
+            font-weight: 600;
+            padding: 5px 20px;
+            margin: 5px 20px;
+            border-radius: 30px;
+            &:hover {
+                background-color: $Thememe2;
+                cursor: pointer;
+            }
+            &::selection {
+                background-color: none;
+                text-decoration: none;
+            }
+            &:nth-child(6) {
+                background-color: $Thememe2;
+            }
+        }
+    }
+}
+
+.App {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    .IDKs {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        table {
+            td {
+                padding: 10px 5px;
+            }
+        }
+    }
+    .CWIs{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .CardWithInformation{
+            margin: 10px;
+        }
+    }
 }
