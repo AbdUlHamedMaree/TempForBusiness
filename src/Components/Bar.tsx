@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import IconLink from './IconLink'
+import React, { FC } from 'react';
+
 
 interface BarProps {
 
@@ -9,12 +9,12 @@ interface BarState {
 
 }
 
-export default class Bar extends Component<BarProps, BarState> {
-    render() {
-        return (
-            <div className='Bar'>
-                {this.props.children}
-            </div>
-        )
-    }
+const Bar: FC<BarProps> = (props) => {
+    return (
+        <div className='Bar'>
+            {props.children}
+        </div>
+    )
 }
+
+export default Bar;

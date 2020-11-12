@@ -1,30 +1,32 @@
-import React, { Component } from 'react';
+import React, {FC} from 'react';
+
 
 interface IDKProps {
-    URL: string;
     Title: string;
+    URL: string;
 }
 
 interface IDKState {
 
 }
 
-export default class IDK extends Component<IDKProps, IDKState> {
-    URLClick = () => {
-        alert('clicked to URL:' + this.props.URL)
+const IDK:FC<IDKProps> = (props) => {
+
+    const IDKOnClick = (URL: string) => {
+        alert(URL)
     }
-    render() {
-        return (
-            <div className='IDK' onClick={this.URLClick}>
-                <div className='IDKElCon'>
-                    <div className='IDKIcon'>
-                        {this.props.children}
-                    </div>
-                    <div className='Title'>
-                        {this.props.Title}
-                    </div>
+
+    return (
+        <div className='IDK' onClick={() => IDKOnClick(props.URL)}>
+            <div className='IDKElCon'>
+                <div className='IDKIcon'>
+                    {props.children}
+                </div>
+                <div className='Title'>
+                    {props.Title}
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
+export default IDK

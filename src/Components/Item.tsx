@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React, { FC } from 'react';
 
-interface ItemState {
 
-}
 interface ItemProps {
   Title: string;
   SecTitle: string;
@@ -10,22 +8,24 @@ interface ItemProps {
   ImagePath: string;
 }
 
-export default class Item extends Component<ItemProps, ItemState>{
+interface ItemState {
+  
+}
 
-  render() {
-    return (
-      <div className='Item'>
-        <img src={this.props.ImagePath} />
+const Item:FC<ItemProps> = (props) => {
+  return (
+    <div className='Item'>
+      <img src={props.ImagePath} />
         <div className='Title'>
-          {this.props.Title}
+          {props.Title}
         </div>
         <div className='SecTitle'>
-          {this.props.SecTitle}
+          {props.SecTitle}
         </div>
         <div className='Description'>
-          {this.props.Discription}
+          {props.Discription}
         </div>
-      </div>
-    )
-  }
+    </div>
+  )
 }
+export default Item
